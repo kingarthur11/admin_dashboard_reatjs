@@ -121,10 +121,8 @@ main{
     display: grid;
     margin: 3px;
     padding: 12px;
-    grid-template-columns: 0.5fr 1fr;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    grid-template-columns: 1fr 0.5fr;
+    grid-auto-rows: minmax(10px);
 }
 .charts__left {
     background: #FFFFFF;
@@ -256,4 +254,10 @@ main{
      font-size: 12px;
      line-height: 15px;
      color: #929496;
+ }
+ .chart_table {
+     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
  }

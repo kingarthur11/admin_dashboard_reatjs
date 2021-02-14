@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+thead {
+    font-weight: bold;
+    color: #637381;
+}
+th, td {
+    font-family: Mulish;
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 1px;
+    margin: 1px;
+    text-align: center;
+}
+td{
+    color: #110B56;;
+}
+tbody{
+    margin: 1px;
+    padding-bottom: 12px;
+}

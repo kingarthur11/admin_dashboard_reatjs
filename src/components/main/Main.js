@@ -50,6 +50,15 @@ const Main = () => {
                  <Chart />
                  <div className="charts">
                     <div className="charts__left">
+                        <div className='chart_table'>
+                            <div>
+                                <button>All</button>
+                                <button>Approval</button>
+                                <button>Pending</button>
+                                <button>Decline</button>
+                            </div>
+                            <select>select</select>
+                        </div>
                        <Table />
                     </div>
                     <div className="charts__right">

@@ -12,7 +12,7 @@ const Navbar = ({sidebarOpen, openSidebar}) => {
                <input type="text" placeholder="Search" className="navbar__left__search"/> 
             </div>
             <div className="navbar__right">
-                <i className="fa fa-bell"></i>
+                <i className="fa fa-bell fa fa-circle"></i>
                 <img width="15" src={image1} alt="image" />
             </div>
         </nav>
