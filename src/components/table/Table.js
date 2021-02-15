@@ -1,8 +1,9 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import { useTable, usePagination } from 'react-table'
 import ROWS from './rows'
 import COLUMNS from './columns'
 import './Table.css'
+import { useFilters } from 'react-table/dist/react-table.development';
 
 const Table = () => {
   const columns = useMemo(() => COLUMNS, [])
@@ -12,7 +13,7 @@ const Table = () => {
     columns,
     data
   },
-    usePagination
+    useFilters, usePagination, 
     )
   const {
     getTableProps,
@@ -25,12 +26,26 @@ const Table = () => {
     canPreviousPage,
     previousPage,
     pageOptions,
-    state
+    state,
+    setFilter
   } = tableInstance
 
   const {pageIndex} = state
+  console.log(state)
+
+  const [filterInput, setFilterInput] = useState("")
+  const handleFilter = e => {
+    const value = e.target.value || undefined;
+    setFilter("yrs", value)
+    setFilterInput(value)
+  }
+
+  for (let i = 1; i <= pageOptions.length; i++ ) {
+    
+  }
   return (
   <>
+    <input value={filterInput} onChange={handleFilter} placeholder={"Search name"} />
     <table {...getTableProps()} >
       <thead>
         {headerGroups.map((headerGroup) => (
@@ -55,11 +70,13 @@ const Table = () => {
       </tbody>
     </table>
     <div>
+       
       
       <button onClick={() => previousPage()} disabled={!canPreviousPage}>Previous</button>
       <span>
         Page{''}
         <strong>
+            
           {pageIndex + 1} of {pageOptions.length}
         </strong>{''}
       </span>

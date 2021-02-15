@@ -1,6 +1,6 @@
 import "./Main.css"
 import Chart from "../charts/Charts"
-import Table from "../table/Table"
+import Table from "../table2/Table"
 import Customer from  "./customer"
 import Message from "./message"
 
